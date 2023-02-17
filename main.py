@@ -34,14 +34,14 @@ def find_mismatch(text):
 def main():
     suc = "Success"
     ch = input()
-    if ch[0] == "I":
+    if "I" in ch:
         text = input()
         mismatch = find_mismatch(text)
         if mismatch == suc:
             print(suc)
         else:
             print(mismatch)
-    elif ch[0] == "F":
+    elif "F" in ch:
         infile = input("File path: ")
         with open(infile, "r") as file:
             text = file.read()
