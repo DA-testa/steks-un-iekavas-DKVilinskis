@@ -34,14 +34,14 @@ def find_mismatch(text):
 def main():
     suc = "Success"
     ch = input()
-    if ch == "I":
+    if ch[0] == "I":
         text = input()
         mismatch = find_mismatch(text)
         if mismatch == suc:
             print(suc)
         else:
             print(mismatch)
-    elif ch == "F":
+    elif ch[0] == "F":
         infile = input("File path: ")
         with open(infile, "r") as file:
             text = file.read()
@@ -50,6 +50,8 @@ def main():
                 print(mismatch)
             else:
                 print(suc)
+    else: 
+        print("wrong input")
 
     # Printing answer, write your code here
 
